@@ -112,7 +112,7 @@
 	</div>
 	<div class="wrapper">
 		<div class="header">
-			<div class="hello"><h2>Welcome to the animal Home</h2></div>
+			<div class="hello"><h2>Welcome to the animal </h2></div>
 		</div>
 		<div class="menu">
 			<ul>
