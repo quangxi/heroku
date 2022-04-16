@@ -59,13 +59,14 @@
 	}
 	.content{
 		width: 100%;
-		height: 650px;;
+		height: auto;;
 	}
 	.content form{
 		margin-right: auto;
 		margin-left: auto;
 		margin-top: 30px;
-		width: 500px;
+		width: 50%;
+		height: 55%;
 		border: 2px solid #ccc;
 		padding: 30px;
 		background: #fff;
@@ -135,9 +136,6 @@
 				<label>Product Image</label>
 				<input type="file" name="product_image">
 
-				<label>Product Description</label>
-				<input type="text" name="product_description">
-
 				<label>Product Type</label>
 				<input type="text" name="product_type">
 
@@ -149,14 +147,13 @@
 		if(isset($_POST['add_product'])){
 			$product_name = $_POST['product_name'];
 			$product_price = $_POST['product_price'];
-			$product_description = $_POST['product_description'];
 			$product_type = $_POST['product_type'];
 
 			$product_image = $_FILES['product_image']['name'];
 			$product_image_tmp = $_FILES['product_image']['tmp_name'];
 			move_uploaded_file($product_image_tmp,"Images/$product_image");
 
-			$sql =" INSERT INTO product VALUES(NULL,'$product_name','$product_price','$product_image','$product_description','$product_type')";
+			$sql =" INSERT INTO product VALUES(NULL,'$product_name','$product_image','$product_price','$product_type')";
 			$insert_pro = mysqli_query($connect,$sql);
 			if($insert_pro)
 			{
