@@ -196,7 +196,7 @@ session_start();
 						$product_type = $row['product_type'];
 						$product_image = $row['product_image'];
 						echo"<div class='single_animal'>
-						<h3> $pruduct_name </h3>
+						<h3> $product_name </h3>
 						<img src='Images/$product_image'width='180' height='180' />
 						<p> Price: $product_price</p> 
 						<p><a href='$product_name.php'> Want to know about $product_name? </a></p>
