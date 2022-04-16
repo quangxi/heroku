@@ -191,13 +191,12 @@ session_start();
 					$sql = "SELECT * FROM product";
 					$result = mysqli_query($connect,$sql);
 					while ($row=mysqli_fetch_array($result)) {
-						$product_id = $row['animal_id'];
-						$product_name = $row['animal_name'];
-						$product_price = $row['animal_price'];
-						$product_type = $row['animal_type'];
-						$product_image = $row['animal_image'];
+						$product_name = $row['product_name'];
+						$product_price = $row['product_price'];
+						$product_type = $row['product_type'];
+						$product_image = $row['product_image'];
 						echo"<div class='single_animal'>
-						<h3> $animal_name </h3>
+						<h3> $pruduct_name </h3>
 						<img src='Images/$product_image'width='180' height='180' />
 						<p> Price: $product_price</p> 
 						<p><a href='$product_name.php'> Want to know about $product_name? </a></p>

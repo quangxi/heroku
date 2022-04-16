@@ -141,7 +141,7 @@
 				<label>Product Type</label>
 				<input type="text" name="product_type">
 
-				<button type="submit" value="Add animal" name="add_product">Add Animal</button>
+				<button type="submit" value="Add animal" name="add_product">Add Product</button>
 			</form>
 		</div>
 		<?php
