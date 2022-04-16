@@ -149,13 +149,13 @@ session_start();
 					<input type="submit" name="search" value="Search">
 				</form>
 			</div>
-			<div class="hello"><h2>Welcome to the animal Home</h2></div>
+			<div class="hello"><h2>Welcome to our toy shop</h2></div>
 		</div>
 		<div class="menu">
 			<ul>
 				<li class="active"><a href="Trangchu.php">  Home  </a></li>
 				<li><a href="help.php">  Help  </a></li>
-				<li><a href="Addanimals.php">  Add Animals  </a></li>
+				<li><a href="Addproduct.php">  Add Products  </a></li>
 				<li><a href="login.php">  Login  </a></li>
 				<li><a href="Rigister.php">  Sign Up  </a></li>
 				<li><a href="logout.php">Log out?</a></li>
@@ -163,14 +163,14 @@ session_start();
 		</div>
 		<div class="content">
 			<div class="low">
-				<p>Animal Type</p>
+				<p>Toy Type</p>
 				<div class="type">
 					<ul>
-						<li><a href="dog.php">Dog</a></li><br>
-						<li><a href="cat.php">Cat</a></li><br>
-						<li><a href="mouse.php">Mouse</a></li><br>
-						<li><a href="duck.php">Duck</a></li><br>
-						<li><a href="elephant">Elephant</a></li><br>
+						<li><a href="car.php">Car</a></li><br>
+						<li><a href="bike.php">Bike</a></li><br>
+						<li><a href="robot.php">Robot</a></li><br>
+						<li><a href="gun.php">Gun</a></li><br>
+						<li><a href="sword.php">Sword</a></li><br>
 					</ul>
 				</div>
 				<p>User</p>
@@ -184,24 +184,23 @@ session_start();
 				</div>
 			</div>
 			<div class="up">
-				<p style="text-align: center;font-size: 20px;">All Animals</p>
+				<p style="text-align: center;font-size: 20px;">All Products</p>
 				<div class="animal_box">
 					<?php
 					include("Connect.php");
-					$sql = "SELECT * FROM animal";
+					$sql = "SELECT * FROM product";
 					$result = mysqli_query($connect,$sql);
 					while ($row=mysqli_fetch_array($result)) {
-						$animal_id = $row['animal_id'];
-						$animal_name = $row['animal_name'];
-						$animal_price = $row['animal_price'];
-						$animal_image = $row['animal_image'];
-						$animal_description = $row['animal_description'];
-						$animal_type = $row['animal_type'];
+						$product_id = $row['animal_id'];
+						$product_name = $row['animal_name'];
+						$product_price = $row['animal_price'];
+						$product_type = $row['animal_type'];
+						$product_image = $row['animal_image'];
 						echo"<div class='single_animal'>
 						<h3> $animal_name </h3>
-						<img src='Images/$animal_image'width='180' height='180' />
-						<p> Price: $animal_price</p> 
-						<p><a href='$animal_name.php'> Want to know about $animal_name? </a></p>
+						<img src='Images/$product_image'width='180' height='180' />
+						<p> Price: $product_price</p> 
+						<p><a href='$product_name.php'> Want to know about $product_name? </a></p>
 						</div>
 						";
 					}

@@ -116,7 +116,7 @@
 		</div>
 		<div class="menu">
 			<ul>
-				<li><a href="Trangchu.php">  Home  </a></li>
+				<li><a href="index.php">  Home  </a></li>
 				<li><a href="">  Help  </a></li>
 				<li class="active"><a href="Addanimals.php">  Add Animals  </a></li>
 				<li><a href="login.php">  Login  </a></li>
@@ -126,30 +126,27 @@
 		<div class="content">
 			<form action="" method="POST" enctype="multipart/form-data">
 				<h2>Add animals</h2>
-				<label>Animal ID</label>
-				<input type="text" name="animal_id">
+				<label>Product Name</label>
+				<input type="text" name="product_name">
 
-				<label>Animal Name</label>
-				<input type="text" name="animal_name">
+				<label>Product Price</label>
+				<input type="text" name="product_price">
 
-				<label>Animal Price</label>
-				<input type="text" name="animal_price">
+				<label>Product Image</label>
+				<input type="file" name="product_image">
 
-				<label>Animal Image</label>
-				<input type="file" name="animal_image">
+				<label>Product Description</label>
+				<input type="text" name="product_description">
 
-				<label>Animal Description</label>
-				<input type="text" name="animal_description">
+				<label>Product Type</label>
+				<input type="text" name="product_type">
 
-				<label>Animal Type</label>
-				<input type="text" name="animal_type">
-
-				<button type="submit" value="Add animal" name="add_animal">Add Animal</button>
+				<button type="submit" value="Add animal" name="add_product">Add Animal</button>
 			</form>
 		</div>
 		<?php
 		include("Connect.php");
-		if(isset($_POST['add_animal'])){
+		if(isset($_POST['add_product'])){
 			$animal_name = $_POST['animal_name'];
 			$animal_price = $_POST['animal_price'];
 			$animal_description = $_POST['animal_description'];
