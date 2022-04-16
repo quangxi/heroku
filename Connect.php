@@ -1,8 +1,8 @@
 <?php
 
     $servername='3.132.234.157';
-    $username='quang101';
-    $password='quang101';
+    $username='quang';
+    $password='Quang123@123a';
     $database='toy_DB';
 
 

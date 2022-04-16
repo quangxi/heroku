@@ -153,7 +153,8 @@
 			$product_image_tmp = $_FILES['product_image']['tmp_name'];
 			move_uploaded_file($product_image_tmp,"Images/$product_image");
 
-			$sql = "INSERT INTO product (product_id, product_name, product_image,product_price, product_type) VALUES(NULL,'$product_name','$product_image','$product_price','$product_type')";
+			$sql = "INSERT INTO product VALUES(NULL,'$product_name','$product_image','$product_price','$product_type')";
+
 			$insert_pro = mysqli_query($connect,$sql);
 			if($insert_pro)
 			{
