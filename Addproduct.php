@@ -112,20 +112,20 @@
 	</div>
 	<div class="wrapper">
 		<div class="header">
-			<div class="hello"><h2>Welcome to the animal </h2></div>
+			<div class="hello"><h2>Welcome to our toy shop </h2></div>
 		</div>
 		<div class="menu">
 			<ul>
 				<li><a href="index.php">  Home  </a></li>
 				<li><a href="">  Help  </a></li>
-				<li class="active"><a href="Addanimals.php">  Add Animals  </a></li>
+				<li class="active"><a href="Addproduct.php">  Add Products  </a></li>
 				<li><a href="login.php">  Login  </a></li>
 				<li><a href="Rigister.php">  Sign Up  </a></li>
 			</ul>
 		</div>
 		<div class="content">
 			<form action="" method="POST" enctype="multipart/form-data">
-				<h2>Add animals</h2>
+				<h2>Add Products</h2>
 				<label>Product Name</label>
 				<input type="text" name="product_name">
 
@@ -147,17 +147,16 @@
 		<?php
 		include("Connect.php");
 		if(isset($_POST['add_product'])){
-			$animal_name = $_POST['animal_name'];
-			$animal_price = $_POST['animal_price'];
-			$animal_description = $_POST['animal_description'];
-			$animal_type = $_POST['animal_type'];
-			$animal_id = $_POST['animal_id'];
+			$product_name = $_POST['product_name'];
+			$product_price = $_POST['product_price'];
+			$product_description = $_POST['product_description'];
+			$product_type = $_POST['product_type'];
 
-			$animal_image = $_FILES['animal_image']['name'];
-			$animal_image_tmp = $_FILES['animal_image']['tmp_name'];
-			move_uploaded_file($animal_image_tmp,"Images/$animal_image");
+			$product_image = $_FILES['product_image']['name'];
+			$product_image_tmp = $_FILES['product_image']['tmp_name'];
+			move_uploaded_file($product_image_tmp,"Images/$product_image");
 
-			$sql =" INSERT INTO animal VALUES('$animal_id','$animal_name','$animal_price','$animal_image','$animal_description','$animal_type')";
+			$sql =" INSERT INTO product VALUES(NULL,'$product_name','$product_price','$product_image','$product_description','$product_type')";
 			$insert_pro = mysqli_query($connect,$sql);
 			if($insert_pro)
 			{
