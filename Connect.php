@@ -5,6 +5,7 @@
     $password='quang101';
     $database='toy_DB';
 
+
     $connect = mysqli_connect($servername,$username,$password,$database);
     if(!$connect){
         echo"falied";
