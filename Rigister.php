@@ -118,7 +118,7 @@
 			<ul>
 				<li><a href="Trangchu.php">  Home  </a></li>
 				<li><a href="">  Help  </a></li>
-				<li><a href="Addanimals.php">  Add Animals  </a></li>
+				<li><a href="Addproducts.php">  Add Animals  </a></li>
 				<li><a href="login.php">  Login  </a></li>
 				<li class="active"><a href="Rigister.php">  Sign Up  </a></li>
 			</ul>
